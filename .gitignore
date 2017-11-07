@@ -1,0 +1,11 @@
+*.DS_Store
+*.swp
+.env
+.nyc_output
+build
+cache
+coverage
+dist
+node_modules
+npm-debug.log
+.yarnclean

@@ -1,0 +1,62 @@
+{
+  "name": "home-gallery",
+  "version": "0.1.0",
+  "description": "A simple gallery viewer for browsing home information.",
+  "main": "index.js",
+  "repository": "https://github.com/RenderingHouse/home-gallery",
+  "author": {"name": "Keng Lim", "email": "keng@renderinghouse.com"},
+  "contributors": [
+    {"name": "Jonathan McSwain", "email": "jonathan@renderinghouse.com"},
+    {"name": "Elías E. del Real", "email": "elias@renderinghouse.com"}
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build cache",
+    "build-debug": "yarn run clean && webpack -d --config ./config/webpack.build.debug.config.js",
+    "build-production": "yarn run clean && webpack --config ./config/webpack.build.production.config.js",
+    "lint": "eslint ./config/webpack*.js src --ext .js --ext .jsx",
+    "start": "yarn run build-debug && yarn run webpack-dev-server",
+    "webpack-dev-server": "webpack-dev-server --progress --colors --config ./config/webpack-dev-server.config.js"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-event-listener": "^0.4.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "react-hot-loader": "3.0.0-beta.6",
+    "redux-mock-store": "^1.2.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4",
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.5.4",
+    "webpack-parallel-uglify-plugin": "^0.4.1"
+  }
+}
