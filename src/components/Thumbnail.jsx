@@ -42,10 +42,15 @@ class Thumbnail extends Component {
     src: PropTypes.string.isRequired,
     cost: PropTypes.number.isRequired,
     size: PropTypes.number.isRequired,
+    openModal: PropTypes.func.isRequired,
+  }
+
+  handleClick = () => {
+    this.props.openModal(this.props.name, this.props.size, this.props.cost)
   }
 
   render = () =>
-    <div style={style.tile}>
+    <div style={style.tile} onClick={this.handleClick}>
       <section style={style.tileHeader}>{this.props.name}</section>
       <div style={{
         backgroundImage: `url(${imgLoc}${this.props.src})`,
