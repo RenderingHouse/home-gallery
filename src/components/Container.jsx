@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Thumbnail from './Thumbnail'
 import homes from '../data/homes'
-// import PropTypes from 'prop-types'
 
 const style = {
   backgroundColor: 'whitesmoke',
